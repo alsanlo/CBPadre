@@ -22,10 +22,6 @@ pipeline {
           steps {
             sh 'a'
           }
-          stage('EjecucionHijo1') {
-          steps {
-            sh 'a'
-          }
         }
         stage('PreparacionHijo2') {
           steps {
@@ -41,7 +37,10 @@ pipeline {
     }
     stage('EjecucionHijos') {
       parallel {
-        
+                  stage('EjecucionHijo1') {
+          steps {
+            sh 'a'
+          }
         }
         stage('EjecucionHijo2') {
           steps {
